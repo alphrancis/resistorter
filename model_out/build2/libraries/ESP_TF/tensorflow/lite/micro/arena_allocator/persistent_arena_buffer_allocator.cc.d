@@ -1,0 +1,28 @@
+C:\Users\alphr\Downloads\esp32cam_uart_stream\model_out\build2\libraries\ESP_TF\tensorflow\lite\micro\arena_allocator\persistent_arena_buffer_allocator.cc.o: \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src\tensorflow\lite\micro\arena_allocator\persistent_arena_buffer_allocator.cc \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/tensorflow/lite/micro/arena_allocator/persistent_arena_buffer_allocator.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/tensorflow/lite/c/common.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/tensorflow/lite/core/c/common.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/tensorflow/lite/core/c/c_api_types.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/tensorflow/lite/micro/arena_allocator/ibuffer_allocator.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/tensorflow/lite/c/c_api_types.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/tensorflow/lite/micro/compatibility.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/tensorflow/lite/micro/memory_helpers.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/tensorflow/lite/schema/schema_generated.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/flatbuffers.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/array.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/base.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/stl_emulation.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/vector.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/buffer.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/buffer_ref.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/verifier.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/detached_buffer.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/allocator.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/default_allocator.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/flatbuffer_builder.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/string.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/struct.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/table.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/flatbuffers/vector_downward.h \
+ C:\Users\alphr\Documents\Arduino\libraries\ESP_TF\src/tensorflow/lite/micro/micro_log.h

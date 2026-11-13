@@ -1,0 +1,49 @@
+dataset\good\good_20261111_223825_512.jpg  looks like bent (100%)
+dataset\good\good_20261111_223825_924.jpg  looks like bent (99%)
+dataset\good\good_20261111_223826_535.jpg  looks like bent (99%)
+dataset\good\good_20261111_223827_767.jpg  looks like bent (97%)
+dataset\good\good_20261111_223828_176.jpg  looks like bent (100%)
+dataset\good\good_20261111_223828_772.jpg  looks like bent (99%)
+dataset\good\good_20261111_223854_182.jpg  no part visible
+dataset\good\good_20261111_224020_774.jpg  no part visible
+dataset\good\good_20261111_224259_701.jpg  no part visible
+dataset\good\good_20261112_230632_959.jpg  looks like empty (92%)
+dataset\good\good_20261112_230644_919.jpg  no part visible
+dataset\good\good_20261112_230645_083.jpg  no part visible
+dataset\good\good_20261112_230645_254.jpg  no part visible
+dataset\good\good_20261112_230645_418.jpg  no part visible
+dataset\good\good_20261112_230645_587.jpg  no part visible
+dataset\good\good_20261112_230645_752.jpg  no part visible
+dataset\good\good_20261112_230645_922.jpg  no part visible
+dataset\good\good_20261112_230746_612.jpg  no part visible
+dataset\good\good_20261112_230746_777.jpg  no part visible
+dataset\good\good_20261112_230746_947.jpg  no part visible
+dataset\good\good_20261112_230747_115.jpg  no part visible
+dataset\good\good_20261112_230747_283.jpg  no part visible
+dataset\good\good_20261112_230747_453.jpg  no part visible
+dataset\good\good_20261113_002632_903.jpg  looks like bent (98%)
+dataset\good\good_20261113_002633_102.jpg  looks like bent (97%)
+dataset\good\good_20261113_002633_303.jpg  looks like bent (97%)
+dataset\good\good_20261113_002633_505.jpg  looks like bent (99%)
+dataset\good\good_20261113_011434_207.jpg  looks like bent (94%)
+dataset\good\good_20261113_011434_405.jpg  looks like bent (98%)
+dataset\bent\bent_20261111_223140_017.jpg  no part visible
+dataset\bent\bent_20261111_223324_705.jpg  no part visible
+dataset\bent\bent_20261111_223330_344.jpg  no part visible
+dataset\bent\bent_20261111_223403_064.jpg  no part visible
+dataset\bent\bent_20261111_223403_431.jpg  no part visible
+dataset\bent\bent_20261111_223404_147.jpg  no part visible
+dataset\bent\bent_20261111_223509_671.jpg  no part visible
+dataset\bent\bent_20261111_223537_761.jpg  no part visible
+dataset\bent\bent_20261111_223550_096.jpg  no part visible
+dataset\bent\bent_20261111_223550_782.jpg  no part visible
+dataset\bent\bent_20261111_224436_033.jpg  no part visible
+dataset\bent\bent_20261111_224436_554.jpg  no part visible
+dataset\bent\bent_20261111_224459_917.jpg  no part visible
+dataset\bent\bent_20261111_224500_628.jpg  no part visible
+dataset\bent\bent_20261111_224537_993.jpg  no part visible
+dataset\bent\bent_20261111_224538_354.jpg  no part visible
+dataset\bent\bent_20261111_224606_804.jpg  no part visible
+dataset\bent\bent_20261111_224607_333.jpg  no part visible
+dataset\bent\bent_20261111_224731_197.jpg  no part visible
+dataset\burnt\burnt_20261113_023133_517.jpg  no part visible

@@ -1,0 +1,50 @@
+classes: ['empty', 'good', 'bent', 'burnt']
+test images: 494 (never used for training)
+float model accuracy: 0.893
+int8 model accuracy (what runs on the ESP32-S3): 0.856
+int8 model size: 632 KB
+
+confusion matrix, int8 (rows = true, cols = predicted):
+               empty    good    bent   burnt
+     empty       100       0       0       0
+      good         0     220       0       0
+      bent         0       2      72       0
+     burnt         0      30      39      31
+
+skipped images:
+dataset\good\good_20261111_223854_182.jpg
+dataset\good\good_20261111_224020_774.jpg
+dataset\good\good_20261111_224259_701.jpg
+dataset\good\good_20261112_230644_919.jpg
+dataset\good\good_20261112_230645_083.jpg
+dataset\good\good_20261112_230645_254.jpg
+dataset\good\good_20261112_230645_418.jpg
+dataset\good\good_20261112_230645_587.jpg
+dataset\good\good_20261112_230645_752.jpg
+dataset\good\good_20261112_230645_922.jpg
+dataset\good\good_20261112_230746_612.jpg
+dataset\good\good_20261112_230746_777.jpg
+dataset\good\good_20261112_230746_947.jpg
+dataset\good\good_20261112_230747_115.jpg
+dataset\good\good_20261112_230747_283.jpg
+dataset\good\good_20261112_230747_453.jpg
+dataset\bent\bent_20261111_223140_017.jpg
+dataset\bent\bent_20261111_223324_705.jpg
+dataset\bent\bent_20261111_223330_344.jpg
+dataset\bent\bent_20261111_223403_064.jpg
+dataset\bent\bent_20261111_223403_431.jpg
+dataset\bent\bent_20261111_223404_147.jpg
+dataset\bent\bent_20261111_223509_671.jpg
+dataset\bent\bent_20261111_223537_761.jpg
+dataset\bent\bent_20261111_223550_096.jpg
+dataset\bent\bent_20261111_223550_782.jpg
+dataset\bent\bent_20261111_224436_033.jpg
+dataset\bent\bent_20261111_224436_554.jpg
+dataset\bent\bent_20261111_224459_917.jpg
+dataset\bent\bent_20261111_224500_628.jpg
+dataset\bent\bent_20261111_224537_993.jpg
+dataset\bent\bent_20261111_224538_354.jpg
+dataset\bent\bent_20261111_224606_804.jpg
+dataset\bent\bent_20261111_224607_333.jpg
+dataset\bent\bent_20261111_224731_197.jpg
+dataset\burnt\burnt_20261113_023133_517.jpg

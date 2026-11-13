@@ -1,0 +1,12 @@
+classes: ['empty', 'good', 'bent', 'burnt']
+test images: 557
+float accuracy: 0.980
+int8 accuracy (runs on ESP32-CAM): 0.978
+model size: 84 KB
+
+confusion matrix (rows = true, cols = predicted):
+             empty    good    bent   burnt
+   empty       100       0       0       0
+    good         0     232       7       1
+    bent         0       1      96       3
+   burnt         0       0       0     117
