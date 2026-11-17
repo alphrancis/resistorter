@@ -20,7 +20,7 @@ os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")
 import tensorflow as tf  # noqa: E402
 
 IMG_W, IMG_H = 160, 120          # model input (keeps the camera's 4:3 shape)
-LABEL_ORDER = ["empty", "good", "bent", "burnt"]  # only folders that exist are used
+LABEL_ORDER = ["empty", "good", "bent", "burnt", "double"]  # only folders that exist are used
 BLOCK = 20                       # consecutive shots kept together when splitting
 SEED = 42
 

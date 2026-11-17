@@ -27,7 +27,7 @@ import tensorflow as tf  # noqa: E402
 
 CAM_W, CAM_H = 320, 240
 IMG_W, IMG_H = 160, 120
-LABELS = ["empty", "good", "bent", "burnt"]
+LABELS = ["empty", "good", "bent", "burnt", "double"]
 BLOCK = 20
 SEED = 42
 CACHE = "model_out/fast_cache.npz"
@@ -235,7 +235,7 @@ def train(args):
              f"model size: {len(tfl) / 1024:.0f} KB", "",
              "confusion matrix (rows = true, cols = predicted):",
              "          " + "".join(f"{l:>8s}" for l in LABELS)]
-    lines += [f"{LABELS[i]:>8s}  " + "".join(f"{v:8d}" for v in cm[i]) for i in range(4)]
+    lines += [f"{LABELS[i]:>8s}  " + "".join(f"{v:8d}" for v in cm[i]) for i in range(len(LABELS))]
     print("\n".join(lines))
     open("model_out/fast_report.txt", "w").write("\n".join(lines) + "\n")
     shutil.rmtree("model_out/fast_wrong", ignore_errors=True)

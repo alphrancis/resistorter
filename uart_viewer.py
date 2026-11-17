@@ -13,8 +13,8 @@ Keys:
   + / - sharpening strength
   f     toggle flash LED on the ESP32-CAM
   s     save raw JPEG + processed PNG
-  0-3   dataset capture: save the cropped raw frame (no sharpening) to
-        <out>/<label>/  labels: 0=empty 1=good 2=burnt 3=bent
+  0-4   dataset capture: save the cropped raw frame (no sharpening) to
+        <out>/<label>/  labels: 0=empty 1=good 2=burnt 3=bent 4=double
   b     toggle burst: a label key then saves the next BURST_N frames
   a     toggle AUTO capture: digit keys now pick the class, and a frame is
         saved automatically each time a new part is placed and stops moving
@@ -44,7 +44,7 @@ DISPLAY_MIN_W = 640  # small crops are upscaled to at least this width
 
 MODES = ["off", "unsharp", "deblur"]
 
-LABELS = ["empty", "good", "burnt", "bent"]  # keys 0..3
+LABELS = ["empty", "good", "burnt", "bent", "double"]  # keys 0..4
 BURST_N = 10
 # Auto capture tuning (mean abs pixel diff on a 64x64 gray thumbnail, 0..255)
 AUTO_STILL = 3.0          # below this frame-to-frame diff = scene is still
@@ -195,7 +195,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("port")
     ap.add_argument("--baud", type=int, default=921600)
-    ap.add_argument("--out", default="dataset", help="dataset folder for 0-3 keys")
+    ap.add_argument("--out", default="dataset", help="dataset folder for 0-4 keys")
     ap.add_argument("--auto", action="store_true", help="start with auto capture on")
     args = ap.parse_args()
     counts = count_images(args.out)
