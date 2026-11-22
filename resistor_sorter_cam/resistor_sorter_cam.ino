@@ -59,10 +59,10 @@
 #define CAM_H 240
 static_assert(CAM_W == MODEL_IN_W * 2 && CAM_H == MODEL_IN_H * 2, "camera must be 2x model size");
 
-// The arena MUST be in internal RAM: on the original ESP32, PSRAM access is ~50x slower
-// (the psram cache-bug workaround serializes every access). A static array lands in DRAM.
-static const size_t kArenaSize = 128 * 1024;
-alignas(16) static uint8_t arena[kArenaSize];
+// The arena should be in internal RAM: on the original ESP32, PSRAM access is much slower
+// (the psram cache-bug workaround serializes every access).
+static const size_t kInternalReserve = 40 * 1024;   // left free for camera DMA, tasks, Serial
+static const size_t kPsramArenaSize  = 400 * 1024;
 static tflite::MicroInterpreter *interpreter = nullptr;
 
 // double buffer of decoded RGB565 frames, filled by the camera task
@@ -106,13 +106,29 @@ static bool initModel() {
   resolver.AddMul();
   resolver.AddQuantize();
 
-  static tflite::MicroInterpreter interp(model, resolver, arena, kArenaSize);
-  interpreter = &interp;
-  if (interpreter->AllocateTensors() != kTfLiteOk) {
-    Serial.println("AllocateTensors failed - arena too small for this model (retrain with train_fast.py)");
-    return false;
+  // 1) try fast internal RAM: the largest free block minus a reserve for the camera
+  size_t largest = heap_caps_get_largest_free_block(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
+  size_t size = largest > kInternalReserve + 32 * 1024 ? largest - kInternalReserve : 0;
+  Serial.printf("largest internal RAM block %u B\n", (unsigned)largest);
+  if (size) {
+    uint8_t *a = (uint8_t *)heap_caps_aligned_alloc(16, size, MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
+    if (a) {
+      interpreter = new tflite::MicroInterpreter(model, resolver, a, size);
+      if (interpreter->AllocateTensors() == kTfLiteOk) {
+        Serial.printf("arena in INTERNAL RAM (fast): used %u of %u B\n",
+                      (unsigned)interpreter->arena_used_bytes(), (unsigned)size);
+        return true;
+      }
+      delete interpreter; interpreter = nullptr;
+      heap_caps_free(a);
+    }
   }
-  Serial.printf("model %u B, arena used %u B\n", model_tflite_len,
+  // 2) fallback: PSRAM (works, but slow on the original ESP32)
+  uint8_t *a = (uint8_t *)heap_caps_aligned_alloc(16, kPsramArenaSize, MALLOC_CAP_SPIRAM);
+  if (!a) return false;
+  interpreter = new tflite::MicroInterpreter(model, resolver, a, kPsramArenaSize);
+  if (interpreter->AllocateTensors() != kTfLiteOk) return false;
+  Serial.printf("WARNING: arena in PSRAM (slow): used %u B - model too big for internal RAM\n",
                 (unsigned)interpreter->arena_used_bytes());
   return true;
 }
